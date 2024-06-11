@@ -9,5 +9,9 @@ test ('Selectors Demo', async ({page})   =>  {
 
     // In Playwright we have locators method, and it is preferd and here I want to fill/add text so I have am using the 'fill'
 
-    await page.locator('id=user-name').fill('standard_user')
+    await page.locator('#user-name').fill('standard_user')
+
+    //Using Xpath click on Login button
+    await page.locator('//input[@id="login-button"]')
+    await page.locator('xpath=//input[@id="login-button"]')
 });
