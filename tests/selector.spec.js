@@ -1,13 +1,13 @@
-const {test,expect} = require ('@playwright/test')
+const { test, expect } = require('@playwright/test');
 
-test ('Selectors Demo', async ({page})   =>  {
+test('Selectors Demo', async ({ page }) => {
+    await page.goto('https://www.saucedemo.com');
 
-    await page.goto('https://www.saucedemo.com')
-    //Now use the pause method, from which we can pause the execution and then the playwright inspector will appear
-    await page.pause()
-    await page.click('id=user-name')
+    // Now use the pause method, from which we can pause the execution and then the playwright inspector will appear
+    await page.pause();
+    
+    await page.click('#user-name'); // Using ID selector
 
-    // In Playwright we have locators method, and it is preferd and here I want to fill/add text so I have am using the 'fill'
-
-    await page.locator('id=user-name').fill('standard_user')
+    // Using data attribute to fill in the username
+    await page.locator('[data-test="username"]').fill('standard_user'); // Specific selector for username
 });
