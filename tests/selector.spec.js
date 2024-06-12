@@ -10,13 +10,22 @@ test('Selectors Demo', async ({ page }) => {
 
 
     // Using data attribute to fill in the username
+
     await page.locator('[data-test="username"]').fill('standard_user'); // Specific selector for usernam
+
+    await page.locator('[data-test="username"]').fill('standard_user'); // Specific selector for username
+
+
     // In Playwright we have locators method, and it is preferd and here I want to fill/add text so I have am using the 'fill'
 
     await page.locator('#user-name').fill('standard_user')
 
     //Using Xpath click on Login button
     await page.locator('//input[@id="login-button"]')
+
     // await page.locator('xpath=//input[@id="login-button"]')   // We can also use xpath like this
+
+    await page.locator('xpath=//input[@id="login-button"]')
+
 
 });
