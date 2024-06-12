@@ -8,10 +8,10 @@ test('Selectors Demo', async ({ page }) => {
     
     await page.click('#user-name'); // Using ID selector
 
-<<<<<<< HEAD
+
     // Using data attribute to fill in the username
     await page.locator('[data-test="username"]').fill('standard_user'); // Specific selector for username
-=======
+
     // In Playwright we have locators method, and it is preferd and here I want to fill/add text so I have am using the 'fill'
 
     await page.locator('#user-name').fill('standard_user')
@@ -19,5 +19,5 @@ test('Selectors Demo', async ({ page }) => {
     //Using Xpath click on Login button
     await page.locator('//input[@id="login-button"]')
     await page.locator('xpath=//input[@id="login-button"]')
->>>>>>> 933f3f46695e041189de5f30bf36cb533c7d5a9e
+
 });
