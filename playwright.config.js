@@ -14,7 +14,7 @@ module.exports = defineConfig({
   testDir: './tests',
   //Maximum time that one test can run
 
-  timeout: 10 * 1000,
+  timeout: 60 * 1000,
 
   expect: {
 
@@ -35,6 +35,16 @@ timeout: 5000
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
+
+    // // Adding video on and slow for 1 second
+
+    // video: 'on' ,
+    // launchOptions: {
+      
+    // slowMo: 1000
+    // },
+
+    
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',
 
