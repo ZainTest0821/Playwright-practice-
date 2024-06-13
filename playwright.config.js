@@ -14,7 +14,7 @@ module.exports = defineConfig({
   testDir: './tests',
   //Maximum time that one test can run
 
-  timeout: 60 * 1000,
+  timeout: 30 * 1000,
 
   expect: {
 
